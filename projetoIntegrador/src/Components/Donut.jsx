@@ -1,4 +1,3 @@
-import React from "react";
 import { Chart } from "react-google-charts";
 
 export const data = [
@@ -16,13 +15,14 @@ export const options = {
   is3D: false,
 };
 
-export function Donut() {
+export function Donut(enrolledStudents) {
+  
   return (
     <Chart
       chartType="PieChart"
       width="100%"
       height="400px"
-      data={data}
+      data={enrolledStudents.enrolledStudents}
       options={options}
     />
   );
