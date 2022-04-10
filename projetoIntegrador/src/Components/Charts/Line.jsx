@@ -10,18 +10,18 @@ export const data = [
 ];
 
 export const options = {
-  title: "Company Performance",
+  title: "N° de Escolas no Brasil",
   curveType: "function",
   legend: { position: "bottom" },
 };
 
-export function Line() {
+export function Line(enrolledSchool) {
   return (
     <Chart
       chartType="LineChart"
       width="100%"
       height="400px"
-      data={data}
+      data={enrolledSchool.enrolledSchool }
       options={options}
     />
   );
